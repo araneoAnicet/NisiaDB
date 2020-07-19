@@ -5,6 +5,6 @@
 #include "Arguments\Argument.h"
 
 class Table {
-private:
+public:
     Arguments Arguments;
-}
+};
