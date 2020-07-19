@@ -2,6 +2,7 @@
 #include <vector>
 #include "Entity.h"
 #include "EntityContainer.h"
+#include "EntitiesContainer.h"
 #include "Finder.h"
 
 class Selector {
@@ -11,5 +12,5 @@ private:
     std::vector<Entity*> entities;
 public:
     EntityContainer first();
-    std::vector<Entity*> all();
+    EntitiesContainer all();
 };

@@ -8,6 +8,10 @@ EntityContainer Selector::first() {
     return container;
 }
 
-std::vector<Entity*> Selector::all() {
-    return this->entities;
+EntitiesContainer Selector::all() {
+    EntitiesContainer container(this->has_entities);
+    if (this->has_entities) {
+        container.set_entities(this->entities);
+    }
+    return container;
 }
