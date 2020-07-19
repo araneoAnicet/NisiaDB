@@ -1,7 +1,9 @@
 #pragma once
 #include "Entity.h"
+#include "Selector.h"
 
 class EntityContainer {
+    friend class Selector;
 private:
     Entity* entity;
     bool contains_entity;
