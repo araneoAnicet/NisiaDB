@@ -1,7 +1,9 @@
 #include "Table.h"
 
+
 Table::Table(std::string name) {
     this->name = name;
+    this->find.entities = &(this->entities);
 }
 
 std::string Table::get_name() {
