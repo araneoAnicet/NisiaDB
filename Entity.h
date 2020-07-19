@@ -1,7 +1,7 @@
 #pragma once
-#include <Arguments\Arguments.h>
+#include <Arguments/Arguments.h>
 
 class Entity {
 public:
-    Arguments Arguments;
+    Arguments arguments;
 };
