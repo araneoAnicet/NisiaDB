@@ -8,6 +8,7 @@
 #include <StringArgument.h>
 
 class Arguments {
+    friend class Finder;
 private:
     std::vector<FloatArgument*> float_arguments;
     std::vector<NumberArgument*> number_arguments;
