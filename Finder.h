@@ -5,6 +5,6 @@ class Finder{
 private:
     void SetArguments(Arguments* arguments);
 public:
-    entity_container y_id(unsigned int id);
-    selector by_arguments(Arguments* arguments);
+    EntityContainer by_id(unsigned int id);
+    Selector by_arguments(Arguments* arguments);
 };
