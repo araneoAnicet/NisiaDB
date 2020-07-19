@@ -15,6 +15,8 @@ public:
     Identity id;
     Arguments arguments;
     Table(std::string name);
+    Table(Finder* find);
+
     void add(Entity* entity);
     std::string get_name();
 };
