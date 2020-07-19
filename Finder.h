@@ -1,12 +1,12 @@
 #pragma once
-#include <EntityContainer>
+#include "EntityContainer.h"
 
 class Finder{
 private:
 
 public:
-    EntityContainer byID(unsigned int id);
-    Selector byArguments(Arguments* Arguments);
+    entityContainer by_id(unsigned int id);
+    selector by_arguments(Arguments* arguments);
 private:
-    void SetArguments(Arguments* Arguments);
+    void SetArguments(Arguments* arguments);
 };
