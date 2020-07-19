@@ -5,6 +5,6 @@ Identity::Identity() {
     Identity::top_id++;
 }
 
-long int Identity::get() {
+unsigned int Identity::get() {
     return this->id;
 }

@@ -3,8 +3,8 @@
 class Identity {
 private:
     static long int top_id;
-    long int id;
+    unsigned int id;
 public:
     Identity();
-    long int get();
+    unsigned int get();
 };
