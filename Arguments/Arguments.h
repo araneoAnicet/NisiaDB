@@ -11,4 +11,9 @@ private:
     std::vector<BoolArgument*> bool_arguments;
 public:
     Arguments(Arguments* arguments);
+    void add(FloatArgument* argument);
+    void add(NumberArgument* argument);
+    void add(StringArgument* argument);
+    void add(EntityArgument* argument);
+    void add(BoolArgument* argument);
 };
