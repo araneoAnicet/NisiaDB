@@ -1,4 +1,5 @@
 #include "Finder.h"
-EntityContainer by_id(insigned int id){
 
-};
+EntityContainer Finder::by_id(unsigned int id){
+
+}
