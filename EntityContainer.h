@@ -1,15 +1,14 @@
 #pragma once
 #include "Entity.h"
 #include "Selector.h"
+#include "Container.h"
 
-class EntityContainer {
+class EntityContainer : public Container {
     friend class Selector;
 private:
     Entity* entity;
-    bool contains_entity;
     void set_entity(Entity* entity);
 public:
     EntityContainer(bool contains_entity);
-    bool has_entity();
     Entity* get();
 };
