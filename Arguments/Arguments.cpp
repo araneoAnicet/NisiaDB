@@ -1,20 +1,20 @@
 #include <Arguments.h>
 void Arguments::add(FloatArgument* argument){
-    this->argument.push_back(argument);
+    float_arguments.push_back(argument);
 };
 
 void Arguments::add(NumberArgument* argument){
-    this->argument.push_back(argument);
+    number_arguments.push_back(argument);
 };
 
 void Arguments::add(StringArgument* argument){
-    this->argument.push_back(argument);
+    string_arguments.push_back(argument);
 };
 
 void Arguments::add(EntityArgument* argument){
-    this->argument.push_back(argument);
+    entity_arguments.push_back(argument);
 };
 
 void Arguments::add(BoolArgument* argument){
-    this->argument.push_back(argument);
+    bool_arguments.push_back(argument);
 };
