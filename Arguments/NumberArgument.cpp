@@ -9,5 +9,5 @@ void NumberArgument::set_value(int value) {
 }
 
 int NumberArgument::get_value() {
-    return this->get_value;
+    return this->value;
 }
