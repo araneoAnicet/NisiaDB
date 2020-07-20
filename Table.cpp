@@ -14,3 +14,7 @@ void Table::add(Entity* entity) {
     entity->set_table(this);
     this->entities.push_back(entity);
 }
+
+void Table::set_database(Database* database) {
+    this->database = database;
+}

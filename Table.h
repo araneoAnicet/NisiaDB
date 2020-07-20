@@ -5,11 +5,15 @@
 #include "Arguments/Argument.h"
 #include "Identity.h"
 #include "Finder.h"
+#include "Database.h"
 
 class Table {
+    friend class Database;
 private:
+    Database* database;
     std::string name;
     std::vector<Entity*> entities;
+    void set_database(Database* database);
 public:
     Finder find;
     Identity id;
@@ -17,4 +21,5 @@ public:
     Table(std::string name);
     void add(Entity* entity);
     std::string get_name();
+    Database* get_database();
 };

@@ -5,6 +5,7 @@ Database::Database(std::string name) {
 }
 
 void Database::add_table(Table* table) {
+    table->set_database(this);
     this->tables.push_back(table);
 }
 
