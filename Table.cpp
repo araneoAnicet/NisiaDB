@@ -18,3 +18,7 @@ void Table::add(Entity* entity) {
 void Table::set_database(Database* database) {
     this->database = database;
 }
+
+std::vector<Entity*> Table::get_entities() {
+    return this->entities;
+}

@@ -20,6 +20,7 @@ public:
     Arguments arguments;
     Table(std::string name);
     void add(Entity* entity);
+    std::vector<Entity*> get_entities();
     std::string get_name();
     Database* get_database();
 };
