@@ -11,4 +11,5 @@ private:
 public:
     Identity id;
     Arguments arguments;
+    Table* get_table();
 };
