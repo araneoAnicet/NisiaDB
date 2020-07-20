@@ -5,6 +5,7 @@
 
 class EntityContainer : public Container {
     friend class Selector;
+    friend class Finder;
 private:
     Entity* entity;
     void set_entity(Entity* entity);
