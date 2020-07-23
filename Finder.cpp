@@ -31,13 +31,13 @@ EntityContainer Finder::by_id(unsigned int id){
 }
 
 Selector Finder::by_arguments(Arguments* arguments) {
-    Entity *entity;
     Selector selector;
     selector.has_entities = false;
-
-    if (arguments == entity->arguments){
-        selector.has_entities = true;
-        selector.entities.push_back(entity);
-    };
+    for ( Entity* entity : *entities ){
+        if (arguments == entity->arguments){
+            selector.has_entities = true;
+            selector.entities.push_back(entity);
+        }
+    }
     return selector;
 }
