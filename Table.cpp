@@ -25,8 +25,8 @@ std::vector<Entity*> Table::get_entities() {
 
 void Table::show() {
     std::cout << "ARGUMENTS " << this->name << std::endl;
-    for (Argument argument : this->arguments.get_arguments()) {
-        std::cout << argument.get_name();
+    for (Argument* argument : this->arguments.get_all()) {
+        std::cout << argument->get_name();
     }
     std::cout << std::endl;
     std::cout << "ENTITIES " << this->name << std::endl;
