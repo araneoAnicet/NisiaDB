@@ -24,4 +24,11 @@ public:
     void add(StringArgument* argument);
     void add(EntityArgument* argument);
     void add(BoolArgument* argument);
+
+    std::vector<FloatArgument*> get_float_arguments();
+    std::vector<NumberArgument*> get_number_arguments();
+    std::vector<StringArgument*> get_string_arguments();
+    std::vector<EntityArgument*> get_entity_arguments();
+    std::vector<BoolArgument*> get_bool_arguments();
+    std::vector<Argument*> get_all();
 };

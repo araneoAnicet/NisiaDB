@@ -32,4 +32,39 @@ bool operator==(const Arguments arguments, const Arguments other){
         }
     }
     return false;
+};
+
+std::vector<FloatArgument*> Arguments::get_float_arguments(){
+    return this->float_arguments;
+}
+std::vector<NumberArgument*> Arguments::get_number_arguments(){
+    return this->number_arguments;
+}
+std::vector<StringArgument*> Arguments::get_string_arguments(){
+    return this->string_arguments;
+}
+std::vector<EntityArgument*> Arguments::get_entity_arguments(){
+    return this->entity_arguments;
+}
+std::vector<BoolArgument*> Arguments::get_bool_arguments(){
+    return this->bool_arguments;
+}
+std::vector<Argument*> Arguments::get_all(){
+    std::vector<Argument*> all_arguments;
+    for ( Argument* temp_argument : this->float_arguments ){
+        all_arguments.push_back(temp_argument);
+    }
+    for ( Argument* temp_argument : this->number_arguments ){
+        all_arguments.push_back(temp_argument);
+    }
+    for ( Argument* temp_argument : this->string_arguments ){
+        all_arguments.push_back(temp_argument);
+    }
+    for ( Argument* temp_argument : this->entity_arguments ){
+        all_arguments.push_back(temp_argument);
+    }
+    for ( Argument* temp_argument : this->bool_arguments ){
+        all_arguments.push_back(temp_argument);
+    }
+    return all_arguments;
 }
