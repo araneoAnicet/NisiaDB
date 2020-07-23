@@ -9,6 +9,7 @@
 
 class Arguments {
     friend class Finder;
+    friend bool operator== (const Arguments arguments,const Arguments other);
 private:
     std::vector<FloatArgument*> float_arguments;
     std::vector<NumberArgument*> number_arguments;

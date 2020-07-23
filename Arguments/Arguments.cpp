@@ -18,3 +18,19 @@ void Arguments::add(EntityArgument* argument){
 void Arguments::add(BoolArgument* argument){
     bool_arguments.push_back(argument);
 };
+
+bool operator==(const Arguments arguments, Arguments other){
+    if (arguments.bool_arguments == other.bool_arguments){
+        if (arguments.entity_arguments == other.entity_arguments){
+            if (arguments.float_arguments == other.float_arguments){
+                if (arguments.number_arguments == other.number_arguments){
+                    if (arguments.string_arguments == other.string_arguments){
+                        return true;
+                    }
+                    else
+                        return false;
+                }
+            }
+        }
+    }
+}
