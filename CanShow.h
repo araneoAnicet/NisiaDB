@@ -3,5 +3,5 @@
 
 class CanShow{
 public:
-    virtual void show();
+    virtual void show() = 0;
 };
