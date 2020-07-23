@@ -2,12 +2,14 @@
 #include <string>
 #include <vector>
 #include <Entity.h>
+#include <iostream>
 #include "Arguments/Argument.h"
 #include "Identity.h"
 #include "Finder.h"
 #include "Database.h"
+#include "CanShow.h"
 
-class Table {
+class Table : public CanShow {
     friend class Database;
 private:
     Database* database;
@@ -23,4 +25,5 @@ public:
     std::vector<Entity*> get_entities();
     std::string get_name();
     Database* get_database();
+    void show() override;
 };
