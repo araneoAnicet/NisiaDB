@@ -13,3 +13,9 @@ std::vector<Table*> Database::get_tables() {
     return this->tables;
 }
 
+void Database::show() {
+    std::cout << "TABLES " << this->name << std::endl;
+    for (Table* table : this->tables) {
+        std::cout << "\t" << table->name << std::endl;
+    }
+}
