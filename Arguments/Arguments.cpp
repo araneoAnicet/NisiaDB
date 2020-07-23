@@ -19,7 +19,7 @@ void Arguments::add(BoolArgument* argument){
     bool_arguments.push_back(argument);
 };
 
-bool operator==(const Arguments arguments, Arguments other){
+bool operator==(const Arguments arguments, const Arguments other){
     if (arguments.bool_arguments == other.bool_arguments){
         if (arguments.entity_arguments == other.entity_arguments){
             if (arguments.float_arguments == other.float_arguments){
@@ -27,10 +27,9 @@ bool operator==(const Arguments arguments, Arguments other){
                     if (arguments.string_arguments == other.string_arguments){
                         return true;
                     }
-                    else
-                        return false;
                 }
             }
         }
     }
+    return false;
 }
