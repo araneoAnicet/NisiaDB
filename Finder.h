@@ -2,7 +2,7 @@
 #include "EntityContainer.h"
 #include "Selector.h"
 #include "Entity.h"
-#include "Table.h"
+
 
 class Finder{
 private:

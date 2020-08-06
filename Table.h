@@ -1,13 +1,13 @@
 #pragma once
 #include <string>
 #include <vector>
-#include <Entity.h>
 #include <iostream>
-#include "Arguments/Argument.h"
+#include "Arguments/Arguments.h"
 #include "Identity.h"
 #include "Finder.h"
 #include "Database.h"
 #include "CanShow.h"
+#include "Entity.h"
 
 class Table : public CanShow {
     friend class Database;

@@ -3,7 +3,6 @@
 #include "Entity.h"
 #include "EntityContainer.h"
 #include "EntitiesContainer.h"
-#include "Finder.h"
 
 class Selector {
     friend class Finder;

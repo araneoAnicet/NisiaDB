@@ -1,11 +1,11 @@
 #pragma once
 #include <string>
 #include <vector>
-#include <BoolArgument.h>
-#include <EntityArgument.h>
-#include <FloatArgument.h>
-#include <NumberArgument.h>
-#include <StringArgument.h>
+#include "BoolArgument.h"
+#include "EntityArgument.h"
+#include "FloatArgument.h"
+#include "NumberArgument.h"
+#include "StringArgument.h"
 
 class Arguments {
     friend class Finder;

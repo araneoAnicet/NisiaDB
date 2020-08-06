@@ -1,6 +1,5 @@
 #pragma once
 #include "Entity.h"
-#include "Selector.h"
 #include "Container.h"
 
 class EntityContainer : public Container {
