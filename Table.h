@@ -9,6 +9,7 @@
 #include "CanShow.h"
 #include "Entity.h"
 
+class DataBase;
 class Table : public CanShow {
     friend class Database;
 private:

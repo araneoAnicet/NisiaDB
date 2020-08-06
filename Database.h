@@ -6,7 +6,7 @@
 #include "Table.h"
 #include "CanShow.h"
 
-
+class Table;
 class Database : public CanShow {
 private:
     std::string name;
