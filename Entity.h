@@ -14,6 +14,6 @@ private:
     void set_table(Table* table);
 public:
     Identity id;
-    Arguments arguments;
+    Arguments* arguments;
     Table* get_table();
 };
