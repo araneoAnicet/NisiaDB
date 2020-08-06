@@ -3,6 +3,10 @@
 #include "Identity.h"
 #include "Table.h"
 
+class Selector;
+class EntityContainer;
+class EntitiesContainer;
+class EntityArgument;
 class Entity {
     friend class Table;
 private:
