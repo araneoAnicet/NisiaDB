@@ -3,7 +3,7 @@
 
 Table::Table(std::string name) {
     this->name = name;
-    this->find.entities = &(this->entities);
+    find->entities = &(this->entities);
 }
 
 std::string Table::get_name() {
@@ -25,7 +25,7 @@ std::vector<Entity*> Table::get_entities() {
 
 void Table::show() {
     std::cout << "ARGUMENTS " << this->name << std::endl;
-    for (Argument* argument : this->arguments.get_all()) {
+    for (Argument* argument : arguments->get_all()) {
         std::cout << argument->get_name();
     }
     std::cout << std::endl;

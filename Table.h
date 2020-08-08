@@ -18,9 +18,9 @@ private:
     std::vector<Entity*> entities;
     void set_database(Database* database);
 public:
-    Finder find;
+    Finder* find;
     Identity id;
-    Arguments arguments;
+    Arguments* arguments;
     Table(std::string name);
     void add(Entity* entity);
     std::vector<Entity*> get_entities();
