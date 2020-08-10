@@ -13,3 +13,7 @@ GarbageCollector* GarbageCollector::get_instance() {
 void GarbageCollector::get_notification() {  // called by remove() methods of Collectable objects
     // Implementation of an algorithm
 }
+
+void GarbageCollector::notify_creation(Collectable* ptr) {  // called by notify_initialization of Collectable object
+    // Implementation of an algorithm
+}
