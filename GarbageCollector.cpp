@@ -9,3 +9,7 @@ void GarbageCollector::init() {
 GarbageCollector* GarbageCollector::get_instance() {
     return GarbageCollector::instance;
 }
+
+void GarbageCollector::get_notification() {  // called by remove() methods of Collectable objects
+    // Implementation of an algorithm
+}
