@@ -3,12 +3,12 @@
 #include "Selector.h"
 #include "Entity.h"
 
-
+class Entity;
+class Table;
 class Finder{
-private:
 friend class Table;
-    std::vector<Entity*> *entities;  
-    void set_arguments(Arguments* arguments);
+private:
+    std::vector<Entity*>* entities;  // error here  
 public:
     EntityContainer by_id(unsigned int id);
     Selector by_arguments(Arguments* arguments);

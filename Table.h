@@ -8,15 +8,16 @@
 #include "Database.h"
 #include "CanShow.h"
 #include "Entity.h"
+#include "Initializable.h"
 
 class DataBase;
-class Table : public CanShow {
-    friend class Database;
+class Finder;
+class Table : public CanShow, public Initializable {
 private:
     Database* database;
     std::string name;
     std::vector<Entity*> entities;
-    void set_database(Database* database);
+    // go to Database.h and remove set_database functionality
 public:
     Finder* find;
     Identity id;
@@ -27,4 +28,5 @@ public:
     std::string get_name();
     Database* get_database();
     void show() override;
+    void init(Initializer* initializer) override;
 };

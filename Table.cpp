@@ -3,7 +3,6 @@
 
 Table::Table(std::string name) {
     this->name = name;
-    find->entities = &(this->entities);
 }
 
 std::string Table::get_name() {
@@ -11,12 +10,7 @@ std::string Table::get_name() {
 }
 
 void Table::add(Entity* entity) {
-    entity->set_table(this);
     this->entities.push_back(entity);
-}
-
-void Table::set_database(Database* database) {
-    this->database = database;
 }
 
 std::vector<Entity*> Table::get_entities() {
@@ -33,4 +27,11 @@ void Table::show() {
     for (Entity* entity : this->entities) {
         std::cout << entity->id.get() << std::endl;
     }
+}
+
+void Table::init(Initializer* initializer) {
+    this->find = initializer->getFinder();
+    this->arguments = initializer->getArguments();
+    this->database = initializer->getDatabase();
+    find->entities = &(this->entities);
 }

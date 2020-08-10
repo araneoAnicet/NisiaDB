@@ -2,18 +2,18 @@
 #include "Arguments/Arguments.h"
 #include "Identity.h"
 #include "Table.h"
+#include "Initializable.h"
 
 class Selector;
 class EntityContainer;
 class EntitiesContainer;
 class EntityArgument;
-class Entity {
-    friend class Table;
+class Entity: public Initializable {
 private:
-    Table* table;
-    void set_table(Table* table);
+    Table* table;  // go to Table.h and remove the usage of set_table method
 public:
     Identity id;
     Arguments* arguments;
     Table* get_table();
+    void init(Initializer* initializer) override;
 };

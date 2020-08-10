@@ -5,7 +5,6 @@ Database::Database(std::string name) {
 }
 
 void Database::add_table(Table* table) {
-    table->set_database(this);
     this->tables.push_back(table);
 }
 
@@ -16,6 +15,6 @@ std::vector<Table*> Database::get_tables() {
 void Database::show() {
     std::cout << "TABLES " << this->name << std::endl;
     for (Table* table : this->tables) {
-        std::cout << "\t" << table->name << std::endl;
+        std::cout << "\t" << table->get_name() << std::endl;
     }
 }
