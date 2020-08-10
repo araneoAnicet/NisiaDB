@@ -8,3 +8,5 @@ public:
     static GarbageCollector* get_instance();
     static void init();
 };
+
+GarbageCollector* GarbageCollector::instance = nullptr;
