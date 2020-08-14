@@ -14,6 +14,7 @@ void GarbageCollector::get_notification() {  // called by remove() methods of Co
     // Implementation of an algorithm
 }
 
-void GarbageCollector::notify_creation(Collectable* ptr) {  // called by notify_initialization of Collectable object
-    // Implementation of an algorithm
+// called by notify_initialization of Collectable object
+void GarbageCollector::notify_creation(Collectable* ptr) {
+    this->data.add(ptr);
 }
