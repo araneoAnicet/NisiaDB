@@ -17,8 +17,6 @@ private:
     std::vector<EntityArgument*> entity_arguments;
     std::vector<BoolArgument*> bool_arguments;
 public:
-    Arguments();
-    Arguments(Arguments* arguments);
     void add(FloatArgument* argument);
     void add(NumberArgument* argument);
     void add(StringArgument* argument);

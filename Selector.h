@@ -4,6 +4,8 @@
 #include "EntityContainer.h"
 #include "EntitiesContainer.h"
 
+class Entity;
+class EntityContainer;
 class Selector {
     friend class Finder;
 private:

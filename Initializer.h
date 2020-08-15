@@ -6,6 +6,12 @@
 #include "Database.h"
 #include "Arguments/Arguments.h"
 
+class Arguments;
+class Table;
+class Selector;
+class Finder;
+class Entity;
+class Database;
 class Initializer {
 private:
     Table* table;
