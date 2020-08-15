@@ -11,3 +11,11 @@ void Collectable::push_node(CollectableNode* stack_node) {
 std::stack<CollectableNode*> Collectable::get_nodes_pointing_to() {
     return this->nodes_pointing_to;
 }
+
+bool Collectable::get_remove_marker(){
+    return this->remove_marker;
+}
+
+void Collectable::set_remove_marker(bool value){
+    this->remove_marker = value;
+}
