@@ -12,6 +12,8 @@
 
 class DataBase;
 class Finder;
+class Arguments;
+class Entity;
 class Table : public CanShow, public Initializable {
 private:
     Database* database;

@@ -2,6 +2,7 @@
 #include "../Entity.h"
 #include "Argument.h"
 
+class Entity;
 class EntityArgument : public Argument {
 private:
     Entity* value;

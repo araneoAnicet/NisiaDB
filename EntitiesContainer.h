@@ -3,6 +3,7 @@
 #include "Entity.h"
 #include <vector>
 
+class Entity;
 class EntitiesContainer : public Container {
     friend class Selector;
 private:

@@ -2,6 +2,7 @@
 #include "Entity.h"
 #include "Container.h"
 
+class Entity;
 class EntityContainer : public Container {
     friend class Selector;
     friend class Finder;

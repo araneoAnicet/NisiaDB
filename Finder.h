@@ -2,7 +2,9 @@
 #include "EntityContainer.h"
 #include "Selector.h"
 #include "Entity.h"
+#include "Arguments/Arguments.h"
 
+class Arguments;
 class Entity;
 class Table;
 class Finder{
