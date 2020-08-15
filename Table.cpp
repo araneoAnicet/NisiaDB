@@ -18,7 +18,7 @@ std::vector<Entity*> Table::get_entities() {
 }
 
 void Table::show() {
-    std::cout << "PARAMS OF TABLE " << this->name << std::endl;
+    std::cout << "PARAMS OF TABLE " << this->name << "; ID: " << this->id.get() << std::endl;
     std::cout << "ARGUMENTS" << std::endl;
     for (Argument* argument : arguments->get_all()) {
         std::cout << argument->get_name() << std::endl;
