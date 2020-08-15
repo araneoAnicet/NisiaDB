@@ -18,12 +18,13 @@ std::vector<Entity*> Table::get_entities() {
 }
 
 void Table::show() {
-    std::cout << "ARGUMENTS " << this->name << std::endl;
+    std::cout << "PARAMS OF TABLE " << this->name << std::endl;
+    std::cout << "ARGUMENTS" << std::endl;
     for (Argument* argument : arguments->get_all()) {
-        std::cout << argument->get_name();
+        std::cout << argument->get_name() << std::endl;
     }
     std::cout << std::endl;
-    std::cout << "ENTITIES " << this->name << std::endl;
+    std::cout << "ENTITIES" << std::endl;
     for (Entity* entity : this->entities) {
         std::cout << entity->id.get() << std::endl;
     }

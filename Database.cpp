@@ -13,8 +13,8 @@ std::vector<Table*> Database::get_tables() {
 }
 
 void Database::show() {
-    std::cout << "TABLES " << this->name << std::endl;
+    std::cout << "TABLES OF DATABASE " << this->name << std::endl;
     for (Table* table : this->tables) {
-        std::cout << "\t" << table->get_name() << std::endl;
+        std::cout << table->id.get() <<"\t" << table->get_name() << std::endl;
     }
 }
