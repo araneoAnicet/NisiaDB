@@ -1,21 +1,17 @@
 #include "Argument.h"
 
-template<class T>
-Argument<T>::Argument(std::string name) {
+void Argument::set_name(std::string name) {
     this->name = name;
 }
 
-template<class T>
-std::string Argument<T>::get_name() {
+void Argument::set_type_id(int type_id) {
+    this->type_id = type_id;
+}
+
+std::string Argument::get_name() {
     return this->name;
 }
 
-template<class T>
-void Argument<T>::set_value(T value) {
-    this->value = value;
-}
-
-template<class T>
-T Argument<T>::get_value() {
-    return this->value;
+int Argument::get_type_id() {
+    return this->type_id;
 }

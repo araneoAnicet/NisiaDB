@@ -20,28 +20,9 @@ std::vector<Entity*> Table::get_entities() {
 void Table::show() {
     std::cout << "PARAMS OF TABLE " << this->name << "; ID: " << this->id.get() << std::endl;
     std::cout << "ARGUMENTS" << std::endl;
-
-    for (BoolArgument* argument : arguments->get_bool_arguments()) {
+    for (Argument* argument : arguments->get_all()) {
         std::cout << argument->get_name() << std::endl;
     }
-
-    for (NumberArgument* argument : arguments->get_number_arguments()) {
-        std::cout << argument->get_name() << std::endl;
-    }
-
-    for (FloatArgument* argument : arguments->get_float_arguments()) {
-        std::cout << argument->get_name() << std::endl;
-    }
-
-    for (StringArgument* argument : arguments->get_string_arguments()) {
-        std::cout << argument->get_name() << std::endl;
-    }
-
-    std::cout << "ENTITIES" << std::endl;
-    for (EntityArgument* argument : arguments->get_entity_arguments()) {
-        std::cout << argument->get_value()->id.get() << std::endl;
-    }
-
     std::cout << std::endl;
     std::cout << "ENTITIES" << std::endl;
     for (Entity* entity : this->entities) {
