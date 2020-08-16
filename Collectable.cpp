@@ -27,3 +27,7 @@ void Collectable::__delete() {
 CollectableNode::CollectableNode(Collectable* ptr) {
     this->ptr = ptr;
 }
+
+CollectableNode* Collectable::get_node() {
+    return this->me;
+}

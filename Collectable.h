@@ -16,6 +16,7 @@ protected:
     bool remove_marker = false;
     std::stack<CollectableNode*> nodes_pointing_to;
     CollectableNode* me = new CollectableNode(this);
+    CollectableNode* get_node();
 public:
     virtual void remove() = 0;
     void notify_initialization();
