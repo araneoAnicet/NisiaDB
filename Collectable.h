@@ -11,8 +11,9 @@ public:
 
 class GarbageCollector;
 class Collectable {
-private:
-    bool remove_marker;
+protected:
+    void __delete();
+    bool remove_marker = false;
     std::stack<CollectableNode*> nodes_pointing_to;
     CollectableNode* me = new CollectableNode(this);
 public:
@@ -20,6 +21,6 @@ public:
     void notify_initialization();
     void push_node(CollectableNode* stack_node);
     std::stack<CollectableNode*> get_nodes_pointing_to();
-    bool get_remove_marker();
-    void set_remove_marker(bool value);
+    bool has_remove_marker();
+    void set_remove_marker();
 };

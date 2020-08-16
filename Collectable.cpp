@@ -12,12 +12,16 @@ std::stack<CollectableNode*> Collectable::get_nodes_pointing_to() {
     return this->nodes_pointing_to;
 }
 
-bool Collectable::get_remove_marker(){
+bool Collectable::has_remove_marker(){
     return this->remove_marker;
 }
 
-void Collectable::set_remove_marker(bool value){
-    this->remove_marker = value;
+void Collectable::set_remove_marker(){
+    this->remove_marker = true;
+}
+
+void Collectable::__delete() {
+    GarbageCollector::get_instance()->get_notification();
 }
 
 CollectableNode::CollectableNode(Collectable* ptr) {
