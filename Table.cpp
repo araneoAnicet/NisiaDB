@@ -21,12 +21,12 @@ void Table::show() {
     std::cout << "PARAMS OF TABLE " << this->name << "; ID: " << this->id.get() << std::endl;
     std::cout << "ARGUMENTS" << std::endl;
     for (Argument* argument : arguments->get_all()) {
-        std::cout << argument->get_name() << std::endl;
+        std::cout << "\t" << argument->get_name() << std::endl;
     }
     std::cout << std::endl;
-    std::cout << "ENTITIES" << std::endl;
+    std::cout << "ENTITIES IDS" << std::endl;
     for (Entity* entity : this->entities) {
-        std::cout << entity->id.get() << std::endl;
+        std::cout << "\t" << entity->id.get() << std::endl;
     }
 }
 
