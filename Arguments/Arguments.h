@@ -1,11 +1,9 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "BoolArgument.h"
-#include "EntityArgument.h"
-#include "FloatArgument.h"
-#include "NumberArgument.h"
-#include "StringArgument.h"
+#include "Argument.h"
+#include "Argument.cpp"
+
 
 class Arguments {
     friend class Finder;
@@ -28,5 +26,4 @@ public:
     std::vector<StringArgument*> get_string_arguments();
     std::vector<EntityArgument*> get_entity_arguments();
     std::vector<BoolArgument*> get_bool_arguments();
-    std::vector<Argument*> get_all();
 };

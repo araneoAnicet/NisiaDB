@@ -1,21 +1,23 @@
 #pragma once
 #include <string>
+#include "../Entity.h"
 
 
-// argument types
-#define NUMBER 0
-#define FLOAT 1
-#define STRING 2
-#define ENTITY 3
-#define BOOL 4
-
+class Entity;
+template<typename T>
 class Argument {
 protected:
+    T value;
     std::string name;
-    int type_id;
-    void set_type_id(int type_id);
 public:
-    void set_name(std::string name);
+    Argument(std::string name);
     std::string get_name();
-    int get_type_id();
+    void set_value(T value);
+    T get_value();
 };
+
+typedef class Argument<bool> BoolArgument;
+typedef class Argument<float> FloatArgument;
+typedef class Argument<int> NumberArgument;
+typedef class Argument<std::string> StringArgument;
+typedef class Argument<Entity*> EntityArgument;
