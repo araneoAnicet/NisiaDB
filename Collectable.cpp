@@ -19,3 +19,7 @@ bool Collectable::get_remove_marker(){
 void Collectable::set_remove_marker(bool value){
     this->remove_marker = value;
 }
+
+CollectableNode::CollectableNode(Collectable* ptr) {
+    this->ptr = ptr;
+}

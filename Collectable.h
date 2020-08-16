@@ -3,13 +3,10 @@
 #include "GarbageCollector.h"
 
 class CollectableNode {
-    public:
-    CollectableNode(Collectable* ptr) {
-        this->ptr = ptr;
-    }
-    CollectableNode();
-    private:
+private:
     Collectable* ptr = nullptr;
+public:
+    CollectableNode(Collectable* ptr);
 };
 
 class GarbageCollector;
