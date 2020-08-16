@@ -6,5 +6,21 @@ Table* Entity::get_table() {
 
 void Entity::init(Initializer* initializer) {
     this->table = initializer->getTable();
-    this->arguments = initializer->getArguments();
+    Arguments* temp_args = initializer->getArguments();
+    this->arguments = new Arguments();
+    for (FloatArgument* arg : temp_args->get_float_arguments()) {
+        this->arguments->add(arg->copy());
+    }
+    for (BoolArgument* arg : temp_args->get_bool_arguments()) {
+        this->arguments->add(arg->copy());
+    }
+    for (EntityArgument* arg : temp_args->get_entity_arguments()) {
+        this->arguments->add(arg->copy());
+    }
+    for (NumberArgument* arg : temp_args->get_number_arguments()) {
+        this->arguments->add(arg->copy());
+    }
+    for (StringArgument* arg : temp_args->get_string_arguments()) {
+        this->arguments->add(arg->copy());
+    }
 }
