@@ -35,3 +35,7 @@ CollectableNode* Collectable::get_node() {
 Collectable* CollectableNode::get_ptr() {
     return this->ptr;
 }
+
+void Collectable::init(Initializer* initializer){
+    CollectableNode* me = new CollectableNode(this);
+}

@@ -7,10 +7,11 @@
 class Arguments;
 class Entity;
 class Table;
+class Selector;
 class Finder{
 friend class Table;
 private:
-    std::vector<Entity*>* entities;  // error here  
+    std::vector<Entity*>* entities;
 public:
     EntityContainer by_id(unsigned int id);
     Selector by_arguments(Arguments* arguments);

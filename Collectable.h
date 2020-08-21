@@ -1,22 +1,18 @@
 #pragma once
 #include <stack>
 #include "GarbageCollector.h"
-
-class CollectableNode {
-private:
-    Collectable* ptr = nullptr;
-public:
-    CollectableNode(Collectable* ptr);
-    Collectable* get_ptr();
-};
+#include "Initializable.h"
+#include "Initializer.h"
 
 class GarbageCollector;
-class Collectable {
+class CollectableNode;
+class Collectable : public Initializable {
 protected:
     void __delete();
     bool remove_marker = false;
+    void init(Initializer* initializer);
+    CollectableNode* me;
     std::stack<CollectableNode*> nodes_pointing_to;
-    CollectableNode* me = new CollectableNode(this);
     CollectableNode* get_node();
 public:
     virtual void remove() = 0;
@@ -25,4 +21,12 @@ public:
     std::stack<CollectableNode*> get_nodes_pointing_to();
     bool has_remove_marker();
     void set_remove_marker();
+};
+
+class CollectableNode {
+private:
+    Collectable* ptr = nullptr;
+public:
+    CollectableNode(Collectable* ptr);
+    Collectable* get_ptr();
 };
