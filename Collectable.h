@@ -7,6 +7,7 @@ private:
     Collectable* ptr = nullptr;
 public:
     CollectableNode(Collectable* ptr);
+    Collectable* get_ptr();
 };
 
 class GarbageCollector;

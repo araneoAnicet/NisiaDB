@@ -31,3 +31,7 @@ CollectableNode::CollectableNode(Collectable* ptr) {
 CollectableNode* Collectable::get_node() {
     return this->me;
 }
+
+Collectable* CollectableNode::get_ptr() {
+    return this->ptr;
+}
