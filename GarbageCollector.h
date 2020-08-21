@@ -9,6 +9,8 @@ private:
     static GarbageCollector* instance;
     GarbageCollector();
     LinkedList<Collectable*> data;
+    void __mark(Collectable* collectable);
+    void __sweep();
 public:
     static GarbageCollector* get_instance();
     static void init();
