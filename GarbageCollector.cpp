@@ -27,3 +27,13 @@ void GarbageCollector::__mark(Collectable* collectable) {
         temp_stack.pop();
     }
 }
+
+void GarbageCollector::__sweep() {
+    LinkedListNode<Collectable*>* current_node = this->data.get_head() ;
+    while (current_node->next != nullptr) {
+        if (current_node->value->has_remove_marker()) {
+            delete current_node->value;
+        }
+        current_node = current_node->next;
+    }
+}
