@@ -11,6 +11,8 @@ class EntitiesContainer;
 class EntityArgument;
 class Arguments;
 class Table;
+class Initializer;
+class Initializable;
 class Entity: public Initializable {
 private:
     Table* table;  // go to Table.h and remove the usage of set_table method

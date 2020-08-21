@@ -3,7 +3,7 @@
 #include "Collectable.h"
 #include "LinkedList.h"
 
-class Collectalbe;
+class Collectable;
 class GarbageCollector : public Notified {
 private:
     static GarbageCollector* instance;

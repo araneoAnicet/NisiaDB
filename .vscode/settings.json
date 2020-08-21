@@ -38,6 +38,8 @@
         "xstring": "cpp",
         "xtr1common": "cpp",
         "xutility": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "stack": "cpp",
+        "deque": "cpp"
     }
 }

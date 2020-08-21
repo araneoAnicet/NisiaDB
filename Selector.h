@@ -6,6 +6,7 @@
 
 class Entity;
 class EntityContainer;
+class EntitiesContainer;
 class Selector {
     friend class Finder;
 private:
