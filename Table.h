@@ -9,12 +9,13 @@
 #include "CanShow.h"
 #include "Entity.h"
 #include "Initializable.h"
+#include "Collectable.h"
 
 class DataBase;
 class Finder;
 class Arguments;
 class Entity;
-class Table : public CanShow, public Initializable {
+class Table : public CanShow, public Initializable, public Collectable {
 private:
     Database* database;
     std::string name;

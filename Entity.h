@@ -4,6 +4,7 @@
 #include "Table.h"
 #include "Initializable.h"
 #include "Initializer.h"
+#include "Collectable.h"
 
 class Selector;
 class EntityContainer;
@@ -13,7 +14,7 @@ class Arguments;
 class Table;
 class Initializer;
 class Initializable;
-class Entity: public Initializable {
+class Entity: public Initializable, public Collectable {
 private:
     Table* table;  // go to Table.h and remove the usage of set_table method
 public:

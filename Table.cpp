@@ -2,6 +2,8 @@
 
 
 Table::Table(std::string name) {
+    GarbageCollector::get_instance()->notify_creation(this);
+    this->me = new CollectableNode(this);
     this->name = name;
 }
 
@@ -10,6 +12,7 @@ std::string Table::get_name() {
 }
 
 void Table::add(Entity* entity) {
+    this->nodes_pointing_to.push(entity->get_node());
     this->entities.push_back(entity);
 }
 
