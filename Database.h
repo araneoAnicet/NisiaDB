@@ -6,9 +6,11 @@
 #include "Table.h"
 #include "CanShow.h"
 #include "Identity.h"
+#include "Collectable.h"
+#include "GarbageCollector.h"
 
 class Table;
-class Database : public CanShow {
+class Database : public CanShow, public Collectable {
 private:
     std::string name;
     std::vector<Table*> tables;

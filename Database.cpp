@@ -1,10 +1,12 @@
 #include "Database.h"
 
 Database::Database(std::string name) {
+    GarbageCollector::get_instance()->notify_creation(this);
     this->name = name;
 }
 
 void Database::add_table(Table* table) {
+    this->nodes_pointing_to.push(table->get_node());
     this->tables.push_back(table);
 }
 
