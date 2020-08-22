@@ -18,6 +18,7 @@ class Entity: public Initializable, public Collectable {
 private:
     Table* table;  // go to Table.h and remove the usage of set_table method
 public:
+    Entity();
     Identity id;
     Arguments* arguments;
     Table* get_table();

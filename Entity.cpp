@@ -1,5 +1,10 @@
 #include "Entity.h"
 
+Entity::Entity() {
+    GarbageCollector::get_instance()->notify_creation(this);
+    this->me = new CollectableNode(this);
+}
+
 Table* Entity::get_table() {
     return this->table;
 }
