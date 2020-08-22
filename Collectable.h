@@ -8,7 +8,6 @@ class GarbageCollector;
 class CollectableNode;
 class Collectable : public Initializable {
 protected:
-    void __delete();
     bool remove_marker = false;
     CollectableNode* me;
     std::stack<CollectableNode*> nodes_pointing_to;

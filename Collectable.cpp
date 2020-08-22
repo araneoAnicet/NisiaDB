@@ -20,10 +20,6 @@ void Collectable::set_remove_marker(){
     this->remove_marker = true;
 }
 
-void Collectable::__delete() {
-    GarbageCollector::get_instance()->get_notification();
-}
-
 CollectableNode::CollectableNode(Collectable* ptr) {
     this->ptr = ptr;
 }
