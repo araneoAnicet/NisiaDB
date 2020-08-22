@@ -12,10 +12,10 @@ protected:
     bool remove_marker = false;
     CollectableNode* me;
     std::stack<CollectableNode*> nodes_pointing_to;
-    CollectableNode* get_node();
 public:
     void init(Initializer* initializer);
     virtual void remove() = 0;
+    CollectableNode* get_node();
     void notify_initialization();
     void push_node(CollectableNode* stack_node);
     std::stack<CollectableNode*> get_nodes_pointing_to();
