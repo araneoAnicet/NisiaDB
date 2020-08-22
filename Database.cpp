@@ -2,6 +2,7 @@
 
 Database::Database(std::string name) {
     GarbageCollector::get_instance()->notify_creation(this);
+    this->me = new CollectableNode(this);
     this->name = name;
 }
 
