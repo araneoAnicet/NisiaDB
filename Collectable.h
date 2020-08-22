@@ -13,7 +13,7 @@ protected:
     std::stack<CollectableNode*> nodes_pointing_to;
 public:
     void init(Initializer* initializer);
-    virtual void remove() = 0;
+    void remove();
     CollectableNode* get_node();
     void notify_initialization();
     void push_node(CollectableNode* stack_node);
@@ -23,6 +23,7 @@ public:
 };
 
 class CollectableNode {
+friend class Collectable;
 private:
     Collectable* ptr = nullptr;
 public:

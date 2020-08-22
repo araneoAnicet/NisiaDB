@@ -35,3 +35,8 @@ Collectable* CollectableNode::get_ptr() {
 void Collectable::init(Initializer* initializer){
     CollectableNode* me = new CollectableNode(this);
 }
+
+void Collectable::remove() {
+    this->me->ptr = nullptr;
+    GarbageCollector::get_instance()->get_notification();
+}
