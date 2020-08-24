@@ -25,9 +25,9 @@ void GarbageCollector::__mark(Collectable* collectable) {
     std::stack<CollectableNode*> temp_stack = collectable->get_nodes_pointing_to();;
     while (!(temp_stack.empty())) {
         this->__mark(temp_stack.top()->get_ptr());
-        collectable->set_remove_marker();
         temp_stack.pop();
     }
+    collectable->set_remove_marker();
 }
 
 void GarbageCollector::__sweep() {
