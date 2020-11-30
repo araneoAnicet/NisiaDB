@@ -11,7 +11,8 @@
 #include "Initializable.h"
 #include "Collectable.h"
 
-class DataBase;
+
+class Database;
 class Finder;
 class Arguments;
 class Entity;

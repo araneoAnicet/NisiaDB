@@ -1,0 +1,1 @@
+g++ Entity.cpp Database.cpp Table.cpp Initializer.cpp Arguments/Arguments.cpp Finder.cpp EntityContainer.cpp Container.cpp test.cpp Identity.cpp Arguments/Argument.cpp Arguments/BoolArgument.cpp Arguments/StringArgument.cpp -o test

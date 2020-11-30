@@ -1,54 +1,76 @@
 all: NisiaDB
 
-NisiaDB: Argument.o Table.o Selector.o Notifier.o Finder.o EntityContainer.o Entity.o EntitiesContainer.o Database.o CanShow.o Arguments.o BoolArgument.o StringArgument.o NumberArgument.o FloatArgument.o EntityArgument.o
-	g++ Argument.o Table.o Selector.o Identity.o Finder.o EntityContainer.o Entity.o EntitiesContainer.o Database.o CanShow.o Arguments.o BoolArgument.o StringArgument.o NumberArgument.o FloatArgument.o EntityArgument.o
+test: *.o
+	g++ *.o -o test
+
+test.o: test.cpp
+	g++ -c test.cpp
+
+NisiaDB: *.o
+	g++ *.o -o NisiaDB
+
+Collectable.o: Collectable.cpp
+	g++ -c Collectable.cpp
+
+CollectableNode.o: CollectableNode.cpp
+	g++ -c CollectableNode.cpp
+
+Container.o: Container.cpp
+	g++ -c Container.cpp
+
+GarbageCollector.o: GarbageCollector.cpp
+	g++ -c GarbageCollector.cpp
+
+Initializer.o: Initializer.cpp
+	g++ -c Initializer.cpp
+
+LinkedList.o: LinkedList.cpp
+	g++ -c LinkedList.cpp
+
 Table.o: Table.cpp
-	g++ Table.cpp -o output
+	g++ -c Table.cpp
 	
 Selector.o: Selector.cpp
-	g++ Selector.cpp -o output
+	g++ -c Selector.cpp
 	
 Identity.o: Identity.cpp
-	g++ Indentity.cpp -o output
+	g++ -c Indentity.cpp
 	
 Finder.o: Finder.cpp
-	g++ Finder.cpp -o output
+	g++ -c Finder.cpp
 	
 EntityContainer.o: EntityContainer.cpp
-	g++ EntityContainer.cpp -o output
+	g++ -c EntityContainer.cpp
 	
 Entity.o: Entity.cpp
-	g++ Entity.cpp -o output
+	g++ -c Entity.cpp
 	
 EntitiesContainer.o: EntitiesContainer.cpp
-	g++ EntitiesContainer.cpp -o output
+	g++ -c EntitiesContainer.cpp
 	
 Database.o: Database.cpp
-	g++ Database.cpp -o output
-	
-CanShow.o: CanShow.cpp
-	g++ CanShow.cpp -o output
+	g++ -c Database.cpp
 
 BoolArgument.o: BoolArgument.cpp
-	g++ Arguments/BooArgument.cpp -o output
+	g++ -c Arguments/BooArgument.cpp
 	
 StringArgument.o: StringArgument.cpp
-	g++ Arguments/StringArgument -o output
+	g++ -c Arguments/StringArgument
 	
 NumberArgument.o: NumberArgument.cpp
-	g++ Arguments/NumberArgument.cpp -o output
+	g++ -c Arguments/NumberArgument.cpp
 	
 FloatArgument.o: FloatArgument.cpp
-	g++ Arguments/FloatArgument.cpp -o output
+	g++ -c Arguments/FloatArgument.cpp
 	
 EntityArgument.o: EntityArgument.cpp
-	g++ Arguments/EntityArgument.cpp -o output
+	g++ -c Arguments/EntityArgument.cpp
 	
 Arguments.o: Arguments.cpp
-	g++ Arguments/Arguments.cpp -o output
+	g++ -c Arguments/Arguments.cpp
 	
 Argument.o: Argument.cpp
-	g++ Arguments/Argument.cpp -o output
+	g++ -c Arguments/Argument.cpp
 	
 clean:
 	rm -rf *.o NisiaDB

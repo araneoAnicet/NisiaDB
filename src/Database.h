@@ -6,7 +6,7 @@
 #include "Table.h"
 #include "CanShow.h"
 #include "Identity.h"
-#include "Collectable.h"
+
 #include "GarbageCollector.h"
 
 class Table;
