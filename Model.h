@@ -4,13 +4,16 @@
 
 namespace nisia {
     class Model {
-        public:
+        private:
         class Meta {
-            std::vector<NumberArgument*> number_arguments;
-            std::vector<FloatArgument*> float_arguments;
-            std::vector<StringArgument*> string_arguments;
-            std::vector<BoolArgument*> bool_arguments;
-            std::vector<ModelArgument*> model_arguments;
+                public:
+                std::vector<NumberArgument*> number_arguments;
+                std::vector<FloatArgument*> float_arguments;
+                std::vector<StringArgument*> string_arguments;
+                std::vector<BoolArgument*> bool_arguments;
+                std::vector<ModelArgument*> model_arguments;
         };
+        public:
+            Meta meta;
     };
 };
