@@ -2,6 +2,8 @@
 #include <string>
 
 namespace nisia {
+    class Model;
+
     template<class T>
     class Argument {
         private:
@@ -18,4 +20,5 @@ namespace nisia {
     typedef Argument<float> FloatArgument;
     typedef Argument<std::string> StringArgument;
     typedef Argument<bool> BoolArgument;
+    typedef Argument<Model*> ModelArgument;
 };
