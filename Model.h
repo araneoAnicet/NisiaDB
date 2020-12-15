@@ -5,6 +5,11 @@
 namespace nisia {
     class Model {
         private:
+        /* 
+        You should assign your fields as members of arguments lists
+        as you override this method [ init() ]
+        */
+        virtual void init() = 0;
         class Meta {
                 public:
                 std::vector<NumberArgument*> number_arguments;
@@ -15,5 +20,6 @@ namespace nisia {
         };
         public:
             Meta meta;
+            Model();
     };
 };
